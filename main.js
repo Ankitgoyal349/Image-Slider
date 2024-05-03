@@ -8,7 +8,7 @@ let slideInterval;
 const nextSlide = () => {
   
   const current = document.querySelector('.current');
-  // remove current class
+  // remove current
   current.classList.remove('current');
   // Check for next slide
   if(current.nextElementSibling) {
