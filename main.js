@@ -6,9 +6,9 @@ const intervalTime = 5000;
 let slideInterval;
 
 const nextSlide = () => {
-  
+  // Get current class
   const current = document.querySelector('.current');
-  // remove current
+  // remove current class
   current.classList.remove('current');
   // Check for next slide
   if(current.nextElementSibling) {
@@ -37,6 +37,7 @@ const prevSlide = () => {
   setTimeout(() => current.classList.remove('current'));
 };
 
+// Button events
 next.addEventListener('click', e => {
   nextSlide();
   if(auto) {
@@ -56,7 +57,7 @@ prev.addEventListener('click', e => {
 
 });
 
-
+// Auto slide
 if(auto) {
   // Run next slide at interval time
   slideInterval = setInterval(nextSlide, intervalTime);
